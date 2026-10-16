@@ -15,7 +15,9 @@ export default function Layout({
         <SidebarComponent />
         <div className="flex min-w-0 flex-1 flex-col">
           <DashboardHeader />
-          <div className="min-w-0 flex-1">{children}</div>
+          <div className="min-w-0 flex-1 bg-primary/2 px-6 py-10">
+            {children}
+          </div>
         </div>
       </main>
     </SidebarProvider>
