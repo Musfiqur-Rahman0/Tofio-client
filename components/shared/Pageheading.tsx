@@ -3,8 +3,8 @@ import Link from "next/link"
 
 interface Props {
   visibleButton: boolean
-  buttonText: string
-  link: string
+  buttonText?: string
+  link?: string
   subtitle: string
   title: string
   description: string
@@ -25,12 +25,14 @@ export default function PageHeading({
         <h2 className="text-4xl font-semibold">{title}</h2>
         <p className="text-gray-400">{description}</p>
       </div>
-      <Link
-        className={`ui-button bg-primary text-white ${visibleButton ? "block" : "hidden"}`}
-        href={link}
-      >
-        {buttonText}
-      </Link>
+      {visibleButton && link && (
+        <Link
+          className={`ui-button bg-primary text-white ${visibleButton ? "block" : "hidden"}`}
+          href={link}
+        >
+          {buttonText}
+        </Link>
+      )}
     </div>
   )
 }
