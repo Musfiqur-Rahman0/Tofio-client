@@ -9,7 +9,7 @@ export default function Layout({
 }>) {
   return (
     <SidebarProvider
-      style={{ "--sidebar-width": "9.5rem" } as React.CSSProperties}
+      style={{ "--sidebar-width": "12rem" } as React.CSSProperties}
     >
       <main className="flex min-h-svh w-full">
         <SidebarComponent />
